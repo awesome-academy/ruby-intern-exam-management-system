@@ -1,1 +1,1 @@
-# ruby-intern-exam-management-system
+ruby-intern-exam-management-system
