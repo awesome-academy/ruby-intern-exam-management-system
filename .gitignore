@@ -54,3 +54,4 @@ config/settings
 /spec/helpers/
 /spec/requests/
 /spec/views/
+/bin/
