@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ExamManagementSystem</title>
+    <title><%= full_title yield :title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script type="text/javascript">
+      var LOCALE = "<%= I18n.locale %>";
+    </script>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
   <body>
+    <%= raw custom_bootstrap_flash %>
+    <%= link_to t("english"), locale: :en %>
+    <%= link_to t("vietnamese"), locale: :vi %>
     <%= yield %>
   </body>
 </html>
