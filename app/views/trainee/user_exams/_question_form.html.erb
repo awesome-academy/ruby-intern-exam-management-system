@@ -3,7 +3,7 @@
     <% if question.single? %>
       <strong><%= question.content %></strong>
       <% question.answers.each do |answer| %>
-        <div class="radio">
+        <div class="radio <%= class_for_answer(@user_answer_ids, answer) %>">
           <%= question_form.label %(answers_#{answer.id}) do |label| %>
             <%= question_form.radio_button(:answers, answer.id, checked: @user_answer_ids.include?(answer.id), disabled: true) %>
             <%= answer.content %>
@@ -14,7 +14,7 @@
       <strong><%= question.content %></strong>
       <span><%= t("user_exams.multi_choice") %></span>
       <% question.answers.each do |answer| %>
-        <div class="checkbox">
+        <div class="checkbox <%= class_for_answer(@user_answer_ids, answer) %>">
           <%= question_form.label %(answers_#{answer.id}) do |label| %>
             <%= question_form.check_box :answers, { multiple: true, checked: @user_answer_ids.include?(answer.id), disabled: true }, answer.id, nil %>
             <%= answer.content %>
