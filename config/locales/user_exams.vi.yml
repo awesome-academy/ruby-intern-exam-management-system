@@ -32,3 +32,5 @@ vi:
     trainee_name: "Tên học viên: %{name}"
     action: "Hoạt động"
     exams_number: "Tổng số bài: %{number}"
+    total_score: "Tổng điểm: %{score}"
+    exam_question_score: "Điểm: %{score}/%{max_score}"

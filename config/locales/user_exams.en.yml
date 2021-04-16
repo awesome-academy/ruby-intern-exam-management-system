@@ -32,3 +32,5 @@ en:
     trainee_name: "Trainee's name: %{name}"
     action: "Action"
     exams_number: "Exams total: %{number}"
+    total_score: "Total score: %{score}"
+    exam_question_score: "Mark: %{score}/%{max_score}"

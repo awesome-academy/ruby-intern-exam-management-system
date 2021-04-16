@@ -1,0 +1,25 @@
+<tr>
+  <td class="name"><%= trainee.name %></td>
+  <td class="create_date"><%= l(trainee.created_at, format: :long) %></td>
+  <td class="exams_count"><%= trainee.user_exams.size %></td>
+  <td class="exams">
+    <%= link_to(trainee_user_exams_path(trainee_id: trainee.id)) do %>
+      <i class="glyphicon glyphicon-list-alt"></i>
+    <% end %>
+  </td>
+  <td class="profile">
+    <%= link_to(user_path(trainee)) do %>
+      <i class="glyphicon glyphicon-user"></i>
+    <% end %>
+  </td>
+  <td class="edit">
+    <%= link_to(edit_user_path(trainee)) do %>
+      <i class="glyphicon glyphicon-edit"></i>
+    <% end %>
+  </td>
+  <td class="delete">
+    <%= link_to(user_path(trainee), method: :delete) do %>
+      <i class="glyphicon glyphicon-trash"></i>
+    <% end %>
+  </td>
+</tr>

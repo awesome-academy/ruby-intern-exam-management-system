@@ -3,7 +3,6 @@
 
 body {
   width: 100%;
-  display: inline-block;
 }
 
 section {
@@ -98,7 +97,6 @@ p {
   z-index: 0;
   background-color: #d7dde4;
   position: fixed;
-  text-align: center;
   color: #000;
 }
 
@@ -122,6 +120,24 @@ p {
   }
 }
 
+#dashboard {
+  a {
+    padding-left: 60px;
+    font-size: 1.8em;
+  }
+  .sub-item {
+    a {
+      padding-left: 80px;
+      font-size: 1.5em;
+      line-height: 2em;
+    }
+  }
+}
+
+li.sub-item:hover {
+  background-color: #f0efef;
+}
+
 .pagination-container{
   width: 100%;
   text-align: center;
@@ -133,4 +149,8 @@ p {
 
 .active {
   background-color: #e9e9e9;
+}
+
+.user-nav{
+  padding-left: 0;
 }

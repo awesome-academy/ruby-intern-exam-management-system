@@ -11,6 +11,7 @@ class User < ApplicationRecord
   validates :password, presence: true,
             length: {minimum: Settings.user.password.min_length}
   has_many :user_exams, dependent: :destroy
+  scope :sort_by_created_at_desc, ->{order created_at: :desc}
 
   def remember
     self.remember_token = User.new_token

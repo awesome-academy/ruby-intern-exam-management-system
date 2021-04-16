@@ -1,0 +1,32 @@
+<% provide :title, t("users.titles.supervisors") %>
+
+<div class="users-container">
+  <div class="tabcontent supervisor-content">
+    <div class="row">
+      <h2><%= t("users.supervisors") %></h2>
+      <%= search_form_for @q, url: supervisors_users_path, class: "input-group search-box" do |f| %>
+        <%= f.text_field :name_cont, class: "form-control", placeholder: t("users.search_for") %>
+        <span class="input-group-btn">
+          <%= f.submit t("users.search"), class: "btn btn-default" %>
+        </span>
+      <% end %>
+    </div>
+    <table class="supervisor-table table">
+      <thead>
+        <tr>
+          <th class="name"><%= t("users.name") %></th>
+          <th class="create_date"><%= t("users.create_date") %></th>
+          <th class="profile"><%= t("users.porfile") %></th>
+          <th class="edit"><%= t("users.edit") %></th>
+          <th class="delete"><%= t("users.delete") %></th>
+        </tr>
+      </thead>
+      <tbody id="supervisors">
+        <%= render partial: "supervisor", collection: @supervisors, as: :supervisor %>
+      </tbody>
+    </table>
+    <div class="pagination-container" id="supervisor-pagination">
+      <%= paginate @supervisors, remote: true, theme: "twitter-bootstrap-3" %>
+    </div>
+  </div>
+</div>

@@ -6,7 +6,10 @@ en:
   next: "Next"
   question: "Questions"
   subject: "Subjects"
+  user: "Users"
   trainee: "Trainees"
+  supervisor: "Supervisors"
+  new_user: "New user"
   access_denied!: "Access denied!"
   exam: "Exams"
   time:
@@ -16,3 +19,10 @@ en:
       short: "%d %b %H:%M"
   unauthorized:
     message: "You are not authorized to access this page."
+  views:
+      pagination:
+        first: "&laquo; First"
+        last: "Last &raquo;"
+        previous: "&lsaquo; Prev"
+        next: "Next &rsaquo;"
+        truncate: "&hellip;"
