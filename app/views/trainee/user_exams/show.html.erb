@@ -1,0 +1,45 @@
+<% provide :title, t("user_exams.title.show") %>
+
+<% if @user_exam.testing? %>
+  <%= javascript_pack_tag "view_user_exam_detail" %>
+  <%= hidden_field_tag :time, @user_exam.exam.time %>
+<% end %>
+
+<h4><%= t("user_exams.exam_create", time: l(@user_exam.exam.created_at)) %> </h4>
+<div class="user-exam">
+  <h2><%= @user_exam.exam.name %></h2>
+  <hr>
+  <%= form_for @user_exam do |f| %>
+    <ol class="exam-questions-list user-exam-questions-list">
+      <%= f.fields_for :questions, @user_exam.questions.includes(:answers) do |question_form| %>
+        <%= render partial: "question_form", object: question_form, as: :question_form %>
+      <% end %>
+    </ol>
+
+    <%= f.hidden_field :spent_time %>
+
+    <% if @user_exam.testing? %>
+      <%= f.submit t("user_exams.finish"), class: "btn btn-danger user-exam-submit-btn"%>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="timer">
+  <h4><%= t("user_exams.time_remaining") %></h4>
+  <div id="clock" class="is-countdown">
+    <span class="countdown-row" id="countdown-show3">
+    <span class="countdown-section">
+      <span class="countdown-amount" id="hours">0</span>
+        <span class="countdown-period"><%= t("user_exams.hours") %></span>
+      </span>
+      <span class="countdown-section">
+        <span class="countdown-amount" id="minutes">0</span>
+        <span class="countdown-period"><%= t("user_exams.minutes") %></span>
+      </span>
+      <span class="countdown-section">
+        <span class="countdown-amount" id="seconds">0</span>
+        <span class="countdown-period"><%= t("user_exams.seconds") %></span>
+      </span>
+    </span>
+  </div>
+</div>
