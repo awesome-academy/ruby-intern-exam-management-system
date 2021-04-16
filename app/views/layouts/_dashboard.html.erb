@@ -1,6 +1,7 @@
-  <ul class="nav navbar-fixed-left">
-    <li class="nav-item"><%= link_to t("question"), supervisor_questions_path %></li>
-    <li class="nav-item"><%= link_to t("exam"), supervisor_exams_path %></li>
-    <li class="nav-item"><%= link_to t("subjects"), "#" %></li>
-    <li class="nav-item"><%= link_to t("trainees"), "#" %></li>
-  </ul>
+<%= javascript_pack_tag "sidebar_active" %>
+<ul class="nav navbar-fixed-left">
+  <li class="nav-item"><%= link_to t("question"), questions_path %></li>
+  <li class="nav-item"><%= link_to t("exam"), exams_path %></li>
+  <li class="nav-item"><%= link_to t("subject"), "#" %></li>
+  <li class="nav-item"><%= link_to t("trainee"), trainees_path %></li>
+</ul>

@@ -1,0 +1,36 @@
+<% provide :title, t("user_exams.title.all") %>
+<hr>
+  <h3 class="trainee-name">
+    <%= t("user_exams.trainee_name", name: @trainee.name) %>
+  </h3>
+  <h4 class="trainee-exams-number">
+    <%= t("user_exams.exams_number", number: @trainee.user_exams.size) %>
+  </h4>
+<hr>
+<h2><%= t "user_exams.title.all" %></h2>
+<div class="row">
+  <div class="input-group search-box">
+    <input type="text" class="form-control" placeholder="<%= t "questions.search_for" %>">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">
+        <%= t "questions.search" %>
+      </button>
+    </span>
+  </div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="created_date"><%= t "user_exams.create_date" %></th>
+      <th class="subject"><%= t "user_exams.subject" %></th>
+      <th class="status"><%= t "user_exams.status" %></th>
+      <th class="duration"><%= t "user_exams.duration" %></th>
+      <th class="question_number"><%= t "user_exams.question_number" %></th>
+      <th class="spent_time"><%= t "user_exams.spent_time" %></th>
+      <th class="score"><%= t "user_exams.score" %></th>
+      <th class="action"><%= t "user_exams.action" %></th>
+    </tr>
+  </thead>
+  <%= render @user_exams %>
+</table>
+</div>

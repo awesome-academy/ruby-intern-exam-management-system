@@ -5,8 +5,8 @@ vi:
   previous: "Trước"
   next: "Sau"
   question: "Câu hỏi"
-  subjects: "Chủ đề"
-  trainees: "Học viên"
+  subject: "Chủ đề"
+  trainee: "Học viên"
   access_denied!: "Truy cập bị từ chối!"
   exam: "Đề thi"
   time:

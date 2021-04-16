@@ -29,3 +29,6 @@ vi:
     was_done: "Bài thi đã được làm"
     create_success!: "Tạo bài thi thành công!"
     create_failed!: "Tạo bài thi không  thành công!"
+    trainee_name: "Tên học viên: %{name}"
+    action: "Hoạt động"
+    exams_number: "Tổng số bài: %{number}"

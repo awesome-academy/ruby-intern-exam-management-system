@@ -5,8 +5,8 @@ en:
   previous: "Previous"
   next: "Next"
   question: "Questions"
-  subjects: "Subjects"
-  trainees: "Trainees"
+  subject: "Subjects"
+  trainee: "Trainees"
   access_denied!: "Access denied!"
   exam: "Exams"
   time:
