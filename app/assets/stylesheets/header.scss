@@ -1,24 +1,10 @@
 .header-container {
   padding-right: 50px;
+  z-index: 1;
 }
 
 .navbar-inverse{
   background-color: #d7dde4;
-}
-
-.nav-item {
-  display: block;
-}
-
-.nav-item{
-  a {
-    text-decoration: none;
-    color: #d7dde4;
-    font-size: 1.5em;
-    &:hover {
-      color: #20c997;
-    }
-  }
 }
 
 #logo {

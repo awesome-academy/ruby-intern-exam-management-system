@@ -13,7 +13,8 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "toastr";
+@import "toastr/toastr";
 @import "custom";
 @import "header";
-@import "sessions"
+@import "sessions";
+@import "/supervisor/questions";

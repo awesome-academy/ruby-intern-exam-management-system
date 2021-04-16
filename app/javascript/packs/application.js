@@ -10,21 +10,21 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 window.I18n = I18n
-toastr.options = {
-  "closeButton": false,
+global.toastr = require("toastr")
+global.toastr.options = {
+  "closeButton": true,
   "debug": false,
-  "newestOnTop": false,
-  "progressBar": false,
+  "newestOnTop": true,
+  "progressBar": true,
   "positionClass": "toast-top-right",
-  "preventDuplicates": false,
+  "preventDuplicates": true,
   "onclick": null,
   "showDuration": "300",
   "hideDuration": "1000",
   "timeOut": "3000",
   "extendedTimeOut": "1000",
-  "showEasing": "show",
-  "hideEasing": "show",
-  "showMethod": "show",
-  "hideMethod": "show"
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
 }
-global.toastr = require("toastr")

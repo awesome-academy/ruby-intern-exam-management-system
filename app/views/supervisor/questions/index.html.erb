@@ -1,0 +1,21 @@
+<%= javascript_pack_tag "questions" %>
+<% provide :title, t("questions.title") %>
+<h1><%= t("questions.title") %></h1>
+<div class="row">
+  <div class="input-group search-box">
+    <input type="text" class="form-control" placeholder="<%= t("questions.search_for") %>">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">
+        <%= t("questions.search") %>
+      </button>
+    </span>
+  </div>
+</div>
+<div class="question-container">
+  <ol class="quiz">
+    <%= render(@questions) || t("questions.no_result_was_found_html") %>
+  </ol>
+  <div class="pagination-container">
+    <%= will_paginate @collection, previous_label: t("previous"), next_label: t("next")%>
+  </div>
+</div>

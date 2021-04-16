@@ -1,0 +1,90 @@
+.quiz, .choices {
+  padding: 0;
+}
+
+.quiz {
+  margin-left: 50px;
+  list-style: none;
+  counter-reset: item;
+}
+
+.choices {
+  list-style-type: upper-alpha;
+}
+
+.quiz li {
+  margin-bottom: 5px;
+  counter-increment: item;
+  text-align: left;
+  margin: 10px auto;
+}
+
+.quiz li:before {
+  margin-right: 10px;
+  content: attr(counter);
+  background: rgb(22, 23, 24);
+  border-radius: 100%;
+  color: white;
+  padding-top: 3px;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  display: inline-block;
+}
+
+.choices label {
+  display: flex;
+  align-items: center;
+}
+
+.choices label, input[type="radio"] {
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+.view-results {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: inherit;
+  color: white;
+  background: teal;
+  border-radius: 8px;
+  margin-right: 5px;
+}
+
+.my-results {
+  padding: 1rem;
+  border: 1px solid goldenrod;
+}
+
+.questions {
+  width: 70%;
+  border: 1px solid rgb(236, 236, 236);
+  border-radius: 10px;
+  background-color: rgb(236, 236, 236);
+  margin: 20px 0;
+  padding: 10px 20px;
+}
+
+.buttons-container{
+  margin: 10px 0;
+  text-align: center;
+}
+
+.row {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto 20px auto;
+}
+
+.search-box {
+  width: 40%;
+  float: right;
+}
+
+.no-result {
+  text-align: center;
+}

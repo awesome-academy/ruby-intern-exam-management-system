@@ -2,7 +2,8 @@
 @import "bootstrap";
 
 body {
-  padding-top: 60px;
+  width: 100%;
+  display: inline-block;
 }
 
 section {
@@ -98,4 +99,41 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+}
+
+#dashboard {
+  margin-top: -9px;
+  width: 15%;
+  height: 100%;
+  float: left;
+  z-index: 0;
+  background-color: #d7dde4;
+  position: fixed;
+  text-align: center;
+  color: #000;
+}
+
+#content {
+  width: 85%;
+  float: right;
+}
+
+.nav-item {
+  display: block;
+}
+
+.nav-item{
+  a {
+    text-decoration: none;
+    color: #1b1c1d;
+    font-size: 1.5em;
+    &:hover {
+      color: #474b4a;
+    }
+  }
+}
+
+.pagination-container{
+  width: 100%;
+  text-align: center;
 }
