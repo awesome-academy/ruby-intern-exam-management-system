@@ -1,11 +1,13 @@
 class Trainee::UserExamsController < TraineeController
   before_action :correct_user, only: %i(show update)
   before_action :check_user_exam_done?, only: :update
+  before_action :load_subject, only: :create
 
   def index
-    @exams = Exam.sort_by_created_at_desc
+    @subjects = Subject.sort_by_created_at_desc
     @user_exams = current_user.user_exams
-                              .sort_by_created_at_desc.includes(:exam, :subject)
+                              .sort_by_created_at_desc
+                              .includes({exam: :exam_questions}, :subject)
                               .paginate(page: params[:page])
                               .per_page(Settings.page)
   end
@@ -40,6 +42,17 @@ class Trainee::UserExamsController < TraineeController
     redirect_to user_exam_path(@user_exam)
   end
 
+  def create
+    user_exam = current_user.user_exams.build
+    user_exam.exam = @subject.exams.sample
+    if user_exam.save
+      flash[:success] = t("user_exams.create_success!")
+    else
+      flash[:danger] = t("user_exams.create_failed!")
+    end
+    redirect_to user_exams_path
+  end
+
   private
 
   def load_user_answer_ids
@@ -64,6 +77,14 @@ class Trainee::UserExamsController < TraineeController
     return if @user_exam.testing?
 
     flash[:danger] = t("user_exams.was_done")
+    redirect_to user_exams_path
+  end
+
+  def load_subject
+    @subject = Subject.find_by id: params[:subject].to_i
+    return if @subject
+
+    flash[:danger] = t("user_exams.create_failed!")
     redirect_to user_exams_path
   end
 end

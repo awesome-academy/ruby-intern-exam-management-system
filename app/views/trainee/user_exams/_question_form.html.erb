@@ -10,7 +10,7 @@
           <% end %>
         </div>
       <% end %>
-    <% elsif %>
+    <% else %>
       <strong><%= question.content %></strong>
       <span><%= t("user_exams.multi_choice") %></span>
       <% question.answers.each do |answer| %>

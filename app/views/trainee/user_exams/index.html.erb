@@ -1,8 +1,9 @@
 <% provide :title, t("user_exams.title.all") %>
+<hr>
 <div class="row exam">
   <%= form_for :user_exam, action: user_exams_path, class:"form-control" do |f| %>
     <div class="select-subject col-md-4">
-      <%= f.select("exam", options_for_select(exam_options(@exams)), {}, {class:"form-control button"}) %>
+      <%= select_tag("subject", options_for_select(subject_options(@subjects)), {class:"form-control button"}) %>
     </div>
 
     <%= f.submit t("user_exams.create"), class:"btn btn-primary button col-md-2" %>

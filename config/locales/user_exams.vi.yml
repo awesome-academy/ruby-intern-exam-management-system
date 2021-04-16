@@ -27,3 +27,5 @@ vi:
     submit_failed: "Bài thi đã được gửi lên không thành công"
     try_again: "Có lỗi.Vui lòng thử lại"
     was_done: "Bài thi đã được làm"
+    create_success!: "Tạo bài thi thành công!"
+    create_failed!: "Tạo bài thi không  thành công!"
