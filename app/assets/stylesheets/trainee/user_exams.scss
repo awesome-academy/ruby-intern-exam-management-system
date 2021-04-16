@@ -1,0 +1,39 @@
+.select-subject::before {
+  background: transparent;
+  border-radius: 0 2px 2px 0;
+  bottom: 0;
+  color: #000;
+  content: '▼';
+  font-size: 60%;
+  line-height: 34px;
+  padding: 0 7px;
+  pointer-events: none;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+
+.select-subject select {
+  background: #f8f8f8;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.2;
+  margin: 0;
+  outline: none;
+  padding: 4px 3px 3px 5px;
+  -webkit-appearance: none;
+}
+
+thead {
+  background-color: #E1E1E1;
+}
+
+.label{
+  font-size: 100%;
+}
+
+.exam {
+  width: 100%;
+}

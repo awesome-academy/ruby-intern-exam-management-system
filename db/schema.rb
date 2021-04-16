@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_16_021250) do
+ActiveRecord::Schema.define(version: 2021_04_19_064011) do
 
   create_table "answers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.text "content"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2021_04_16_021250) do
     t.bigint "exam_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "status"
     t.index ["exam_id"], name: "index_user_exams_on_exam_id"
     t.index ["user_id"], name: "index_user_exams_on_user_id"
   end

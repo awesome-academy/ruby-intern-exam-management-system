@@ -9,3 +9,8 @@ vi:
   trainees: "Học viên"
   access_denied!: "Truy cập bị từ chối!"
   exam: "Đề thi"
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+      long: "%d-%m-%Y %H:%M"
+      short: "%d %b %H:%M"
