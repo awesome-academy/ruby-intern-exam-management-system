@@ -1,0 +1,10 @@
+vi:
+  exams:
+    title: "Danh sách Đề thi"
+    search: "Tìm kiếm"
+    search_for: "Nhập nội dung..."
+    info: "Chi tiết"
+    edit: "Sửa"
+    delete: "Xoá"
+    subject_name: "Chủ đề: %{name}"
+    no_result_was_found_html: "<h3 class='no-result'>Không có kết quả nào được tìm thâý!</h3>"

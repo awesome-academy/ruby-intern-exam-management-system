@@ -1,0 +1,10 @@
+en:
+  exams:
+    title: "Exams List"
+    search: "Search"
+    search_for: "Search for..."
+    info: "Detail"
+    edit: "Edit"
+    delete: "Delete"
+    subject_name: "Subject: %{name}"
+    no_result_was_found_html: "<h3 class='no-result'>No result was found!</h3>"
