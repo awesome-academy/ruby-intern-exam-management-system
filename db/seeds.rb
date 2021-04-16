@@ -47,11 +47,12 @@ end
   question = Question.create!(content: content,
           choice_type: 2,
           subject_id: Subject.pluck(:id).sample)
+  correct_indexes = [true, false, true].shuffle
   3.times do |m|
     content = Faker::Lorem.sentence(word_count: 10)
     Answer.create!(
       content: content,
-      correct: [true, false].sample,
+      correct: correct_indexes[m],
       question_id: question.id
     )
   end

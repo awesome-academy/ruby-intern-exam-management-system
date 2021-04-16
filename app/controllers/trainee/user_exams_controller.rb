@@ -23,18 +23,7 @@ class Trainee::UserExamsController < TraineeController
   end
 
   def update
-    UserExamAnswer.transaction do
-      load_user_answer_ids
-      @user_answer_ids.each do |id|
-        user_exam_answer = @user_exam.user_exam_answers.build
-        user_exam_answer.user_answer_id = id
-        user_exam_answer.save!
-      end
-    end
-    UserExam.transaction do
-      @user_exam.spent_time = params[:user_exam][:spent_time]
-      @user_exam.unchecked!
-    end
+    save_and_mark_user_exam
     flash[:success] = t("user_exams.submit_success")
     redirect_to user_exams_path
   rescue ActiveRecord::ActiveRecordError
@@ -86,5 +75,21 @@ class Trainee::UserExamsController < TraineeController
 
     flash[:danger] = t("user_exams.create_failed!")
     redirect_to user_exams_path
+  end
+
+  def save_and_mark_user_exam
+    UserExamAnswer.transaction do
+      load_user_answer_ids
+      @user_answer_ids.each do |id|
+        user_exam_answer = @user_exam.user_exam_answers.build
+        user_exam_answer.user_answer_id = id
+        user_exam_answer.save!
+      end
+    end
+    UserExam.transaction do
+      @user_exam.spent_time = params[:user_exam][:spent_time]
+      @user_exam.mark
+      @user_exam.checked!
+    end
   end
 end
