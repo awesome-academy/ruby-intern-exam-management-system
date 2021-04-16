@@ -14,8 +14,7 @@
 
   <body>
     <%= raw custom_bootstrap_flash %>
-    <%= link_to t("english"), locale: :en %>
-    <%= link_to t("vietnamese"), locale: :vi %>
+    <%= render "layouts/header" %>
     <%= yield %>
   </body>
 </html>

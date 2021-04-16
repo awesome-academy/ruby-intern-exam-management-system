@@ -1,0 +1,7 @@
+vi:
+  header:
+    test_system: "Test System"
+    home: "Trang chủ"
+    profile: "Trang cá nhân"
+    logout: "Đăng xuất"
+    login: "Đăng nhập"

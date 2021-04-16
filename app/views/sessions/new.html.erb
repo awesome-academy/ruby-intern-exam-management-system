@@ -1,0 +1,18 @@
+<% provide :title, t("sessions.login") %>
+<h1><%= t("sessions.login") %></h1>
+<div class="login-containner">
+  <%= form_for :session, url: signup_path do |f| %>
+    <%= f.label :email, t("sessions.email") %>
+    <%= f.email_field :email, class: "form-control" %>
+
+    <%= f.label :password, t("sessions.password") %>
+    <%= f.password_field :password, class: "form-control" %>
+
+    <%= f.label :remember_me, class: "checkbox inline" do %>
+      <%= f.check_box :remember_me %>
+      <span><%= t("sessions.remember_me") %></span>
+    <% end %>
+
+    <%= f.submit t("sessions.login"), class: "btn btn-primary" %>
+  <% end %>
+</div>

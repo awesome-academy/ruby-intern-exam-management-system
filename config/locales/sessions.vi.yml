@@ -1,0 +1,9 @@
+vi:
+  sessions:
+    login: "Đăng nhập"
+    email: "Email"
+    password: "Mật khẩu"
+    remember_me: "Ghi nhớ đăng nhập"
+    please_log_in: "Vui lòng đăng nhập"
+    login_failed: "Đăng nhập không thành công"
+    login_success: "Đăng nhập thành công"
