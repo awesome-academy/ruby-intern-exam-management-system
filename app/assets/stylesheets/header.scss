@@ -1,0 +1,54 @@
+.header-container {
+  padding-right: 50px;
+}
+
+.navbar-inverse{
+  background-color: #d7dde4;
+}
+
+.nav-item {
+  display: block;
+}
+
+.nav-item{
+  a {
+    text-decoration: none;
+    color: #d7dde4;
+    font-size: 1.5em;
+    &:hover {
+      color: #20c997;
+    }
+  }
+}
+
+#logo {
+  float: left;
+  margin-left: 50px;
+  font-size: 1.7em;
+  color: rgb(24, 21, 21);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: #565c5a;
+    text-decoration: none;
+  }
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: black;
+  &:hover{
+    color: #444645;
+  }
+}
+
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: rgb(10, 10, 10);
+  background-color: #e0e0e0;
+}
+
+.local_image {
+  width: 40px;
+  height: 20px;
+}

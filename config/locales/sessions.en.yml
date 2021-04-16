@@ -1,0 +1,9 @@
+en:
+  sessions:
+    login: "Login"
+    email: "Email"
+    password: "Password"
+    remember_me: "Remember me"
+    please_log_in: "Please log in"
+    login_failed: "Log in failed"
+    login_success: "Log in success"

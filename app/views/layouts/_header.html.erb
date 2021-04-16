@@ -1,0 +1,34 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="header-container">
+    <%= link_to t("header.test_system"), root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to image_tag("american.jpg", class: "local_image"), locale: :en %>
+        </li>
+        <li>
+          <%= link_to image_tag("vietnam.jpg", class: "local_image"), locale: :vi %>
+        </li>
+        <li><%= link_to t("header.home"), "#" %></li>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= current_user.name %> <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <%= link_to t("header.profile"), "#" %>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to t("header.logout"), logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to t("header.login"), signup_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

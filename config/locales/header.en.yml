@@ -1,0 +1,7 @@
+en:
+  header:
+    test_system: "Test System"
+    home: "Home"
+    profile: "Profile"
+    logout: "Logout"
+    login: "Login"
