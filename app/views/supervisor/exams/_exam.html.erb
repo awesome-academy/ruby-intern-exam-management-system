@@ -4,7 +4,7 @@
       <h3><%= exam.name %></h3>
       <h4><%= t("exams.subject_name", name: exam.subject.name) %></h4>
       <p class="view-btn">
-        <%= link_to t("exams.info"), "#", class: "btn btn-primary", role: "button" %>
+        <%= link_to t("exams.info"), supervisor_exam_path(exam), class: "btn btn-primary", role: "button" %>
         <%= link_to t("exams.edit"), "#", class: "btn btn-success", role: "button" %>
         <%= link_to t("exams.delete"), "#", method: :delete, class: "btn btn-danger", role: "button" %>
       </p>

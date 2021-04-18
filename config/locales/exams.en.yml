@@ -1,6 +1,8 @@
 en:
   exams:
-    title: "Exams List"
+    title:
+      all: "Exams List"
+      detail: "Exam Detail"
     search: "Search"
     search_for: "Search for..."
     info: "Detail"

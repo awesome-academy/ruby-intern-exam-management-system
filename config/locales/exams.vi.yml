@@ -1,6 +1,8 @@
 vi:
   exams:
-    title: "Danh sách Đề thi"
+    title:
+      all: "Danh sách đề thi"
+      detail: "Đề thi chi tiết"
     search: "Tìm kiếm"
     search_for: "Nhập nội dung..."
     info: "Chi tiết"

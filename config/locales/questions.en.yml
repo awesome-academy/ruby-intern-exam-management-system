@@ -3,7 +3,7 @@ en:
     title: "Questions List"
     search: "Search"
     search_for: "Search for..."
-    info: "Infomation"
+    info: "Detail"
     edit: "Edit"
     delete: "Delete"
     no_result_was_found_html: "<h3 class='no-result'>No result was found!</h3>"
