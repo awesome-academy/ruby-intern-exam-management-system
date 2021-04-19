@@ -1,0 +1,8 @@
+<li class="questions">
+  <%= question.content %>
+  <div class="buttons-container">
+    <%= link_to t("questions.info"), "#", class: "btn btn-primary" %>
+    <%= link_to t("questions.edit"), "#", class: "btn btn-success" %>
+    <%= link_to t("questions.delete"), "#", method: :delete, class: "btn btn-danger" %>
+  </div>
+</li>

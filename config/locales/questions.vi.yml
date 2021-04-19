@@ -1,0 +1,9 @@
+vi:
+  questions:
+    title: "Danh sách câu hỏi"
+    search: "Tìm kiếm"
+    search_for: "Nhập nội dung..."
+    info: "Chi tiết"
+    edit: "Sửa"
+    delete: "Xoá"
+    no_result_was_found_html: "<h3 class='no-result'>Không có kết quả nào được tìm thâý!</h3>"

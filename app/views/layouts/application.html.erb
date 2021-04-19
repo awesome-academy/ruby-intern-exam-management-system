@@ -15,6 +15,21 @@
   <body>
     <%= raw custom_bootstrap_flash %>
     <%= render "layouts/header" %>
-    <%= yield %>
+    <% if logged_in? %>
+      <% if current_user.supervisor? %>
+        <div id="dashboard">
+          <%= render "layouts/dashboard" %>
+        </div>
+        <div id="content">
+          <%= yield %>
+        </div>
+      <% elsif %>
+        <div class="container">
+          <%= yield %>
+        </div>
+      <% end %>
+    <% else %>
+      <%= yield %>
+    <% end %>
   </body>
 </html>
