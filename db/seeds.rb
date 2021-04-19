@@ -56,3 +56,26 @@ end
     )
   end
 end
+
+sub_ids_list = Subject.pluck :id
+sub_ids_list.each do |sub_id|
+  2.times do |n|
+    Exam.create!(
+      name: Faker::Lorem.sentence(word_count: 5),
+      time: 20,
+      subject_id: sub_id
+    )
+  end
+end
+
+exams_list = Exam.select :id, :subject_id
+exams_list.each do |exam|
+  questions = Question.where subject_id: exam.subject_id
+  questions.sample(10).each do |question|
+    ExamQuestion.create!(
+      score: 10,
+      question_id: question.id,
+      exam_id: exam.id
+    )
+  end
+end
