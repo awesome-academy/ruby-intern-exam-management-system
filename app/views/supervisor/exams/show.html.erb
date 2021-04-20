@@ -1,0 +1,17 @@
+<% provide :title, t("exams.title.detail") %>
+<h1><%= t("exams.title.detail") %></h1>
+<div class="row">
+  <div class="input-group search-box">
+    <input type="text" class="form-control" placeholder="<%= t("questions.search_for") %>">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">
+        <%= t("questions.search") %>
+      </button>
+    </span>
+  </div>
+</div>
+<div class="question-container">
+  <ol class="exam-questions-list">
+    <%= render partial: "exam_question", collection: @questions, as: :question %>
+  </ol>
+</div>
