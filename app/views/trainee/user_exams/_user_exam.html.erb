@@ -1,14 +1,8 @@
 <tr>
   <td><%= l(user_exam.created_at, format: :long) %></td>
-  <td><%= user_exam.exam.subject.name %></td>
+  <td><%= user_exam.subject.name %></td>
   <td>
-    <% if user_exam.start? %>
-      <span class="label label-primary">
-    <%elsif user_exam.unchecked? %>
-      <span class="label label-info">
-    <% else %>
-      <span class="label label-success">
-    <% end %>
+    <span class="<%= class_for_user_exam_status(user_exam) %>">
       <%= user_exam.status %>
     </span>
   </td>
