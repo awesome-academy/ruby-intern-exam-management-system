@@ -79,3 +79,12 @@ exams_list.each do |exam|
     )
   end
 end
+
+5.times do |n|
+  UserExam.create!(
+    spent_time: 0,
+    status: 0,
+    exam_id: Exam.pluck(:id).sample,
+    user_id: 2
+  )
+end

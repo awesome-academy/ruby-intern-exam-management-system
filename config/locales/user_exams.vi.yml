@@ -1,0 +1,14 @@
+vi:
+  user_exams:
+    title:
+      all: "Danh sách bài thi"
+    create: "Tạo bài thi"
+    create_date: "Ngày tạo"
+    subject: "Chủ đề"
+    status: "Trạng thái"
+    duration: "Thời lượng"
+    question_number: "Số câu hỏi"
+    spent_time: "Thời gian làm"
+    score: "Điểm"
+    start: "Bắt đầu"
+    view: "Xem"

@@ -10,3 +10,4 @@ en:
     delete: "Delete"
     subject_name: "Subject: %{name}"
     no_result_was_found_html: "<h3 class='no-result'>No result was found!</h3>"
+    not_found!: "Exam was not found!"

@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true,
             length: {minimum: Settings.user.password.min_length}
+  has_many :user_exams, dependent: :destroy
 
   def remember
     self.remember_token = User.new_token

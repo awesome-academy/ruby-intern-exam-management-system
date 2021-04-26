@@ -2,7 +2,7 @@
   <%= question.content %>
   <ol class="exam-question-answers">
     <% question.answers.each do |answer| %>
-      <li><%= answer.content %></li>
+      <li class=<%= answer.correct? ? "correct" : "non-correct" %>><%= answer.content %></li>
     <% end %>
   </ol>
   <div class="buttons-container">

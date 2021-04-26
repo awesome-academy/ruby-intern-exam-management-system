@@ -10,5 +10,8 @@ Rails.application.routes.draw do
       resources :questions
       resources :exams
     end
+    namespace :trainee do
+      resources :user_exams
+    end
   end
 end

@@ -1,0 +1,14 @@
+en:
+  user_exams:
+    title:
+      all: "List of Exams"
+    create: "Create Exam"
+    create_date: "Create date"
+    subject: "Subject"
+    status: "Status"
+    duration: "Duration"
+    question_number: "Question Number"
+    spent_time: "Spent time"
+    score: "Score"
+    start: "Start"
+    view: "View"

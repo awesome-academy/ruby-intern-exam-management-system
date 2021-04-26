@@ -57,3 +57,7 @@
 .exam-question-answers li {
   counter-increment: none;
 }
+
+li.correct {
+  background-color: rgb(89, 177, 150);
+}

@@ -9,3 +9,8 @@ en:
   trainees: "Trainees"
   access_denied!: "Access denied!"
   exam: "Exams"
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M"
+      long: "%Y-%m-%d %H:%M"
+      short: "%d %b %H:%M"

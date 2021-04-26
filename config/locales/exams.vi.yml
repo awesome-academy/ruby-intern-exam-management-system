@@ -10,3 +10,4 @@ vi:
     delete: "Xoá"
     subject_name: "Chủ đề: %{name}"
     no_result_was_found_html: "<h3 class='no-result'>Không có kết quả nào được tìm thâý!</h3>"
+    not_found!: "Không tìm thấy đề thi!"

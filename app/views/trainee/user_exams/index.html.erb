@@ -1,0 +1,28 @@
+<% provide :title, t("user_exams.title.all") %>
+<div class="row exam">
+  <%= form_for :user_exam, action: trainee_user_exams_path, class:"form-control" do |f| %>
+    <div class="select-subject col-md-4">
+      <%= f.select("exam", options_for_select(@exams.collect{ |u| [u.name, u.id] }),{}, {class:"form-control button"}) %>
+    </div>
+
+    <%= f.submit t("user_exams.create"), class:"btn btn-primary button col-md-2" %>
+  <% end %>
+</div>
+<hr>
+<h2><%= t("user_exams.title.all") %></h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="created_date"><%= t("user_exams.create_date") %></th>
+      <th class="subject"><%= t("user_exams.subject") %></th>
+      <th class="status"><%= t("user_exams.status") %></th>
+      <th class="duration"><%= t("user_exams.duration") %></th>
+      <th class="question_number"><%= t("user_exams.question_number") %></th>
+      <th class="spent_time"><%= t("user_exams.spent_time") %></th>
+      <th class="score"><%= t("user_exams.score") %></th>
+      <th class="action"></th>
+    </tr>
+  </thead>
+  <%= render @user_exams %>
+</table>
+</div>
