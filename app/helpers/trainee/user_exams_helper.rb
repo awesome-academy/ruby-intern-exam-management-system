@@ -7,6 +7,18 @@ module Trainee::UserExamsHelper
     %(#{two_number(h)}:#{two_number(m)}:#{two_number(s)})
   end
 
+  def exam_options exams
+    exams.map{|u| [u.name, u.id]}
+  end
+
+  def class_for_user_exam_status user_exam
+    return "label label-primary" if user_exam.start?
+    return "label label-info" if user_exam.unchecked?
+    return "label label-success" if user_exam.checked?
+
+    "label label-danger"
+  end
+
   private
 
   def two_number num
