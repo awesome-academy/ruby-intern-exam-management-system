@@ -90,17 +90,6 @@ p {
   line-height: 1.7em;
 }
 
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
-
-input {
-  height: auto !important;
-}
-
 #dashboard {
   margin-top: -9px;
   width: 15%;
@@ -136,4 +125,8 @@ input {
 .pagination-container{
   width: 100%;
   text-align: center;
+}
+
+.container {
+  margin-bottom: 50px;
 }

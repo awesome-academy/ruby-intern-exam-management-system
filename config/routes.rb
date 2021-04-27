@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       resources :questions
       resources :exams
     end
-    namespace :trainee do
+    scope module: :trainee do
       resources :user_exams
     end
   end
