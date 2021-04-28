@@ -27,3 +27,5 @@ en:
     submit_failed: "Your test was unsuccessful submitted"
     try_again: "Having an error. Please try again"
     was_done: "The exam was done"
+    create_success!: "Create exam success!"
+    create_failed!: "Create exam failed!"

@@ -7,8 +7,8 @@ module Trainee::UserExamsHelper
     %(#{two_number(h)}:#{two_number(m)}:#{two_number(s)})
   end
 
-  def exam_options exams
-    exams.map{|u| [u.name, u.id]}
+  def subject_options subjects
+    subjects.map{|u| [u.name, u.id]}
   end
 
   def class_for_user_exam_status user_exam
