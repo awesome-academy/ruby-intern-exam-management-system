@@ -19,6 +19,13 @@ module Trainee::UserExamsHelper
     "label label-danger"
   end
 
+  def class_for_answer user_answer_ids, answer
+    return unless user_answer_ids.include?(answer.id)
+    return "correct" if answer.correct
+
+    "uncorrect"
+  end
+
   private
 
   def two_number num
