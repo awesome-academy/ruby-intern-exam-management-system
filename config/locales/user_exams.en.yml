@@ -29,3 +29,6 @@ en:
     was_done: "The exam was done"
     create_success!: "Create exam success!"
     create_failed!: "Create exam failed!"
+    trainee_name: "Trainee's name: %{name}"
+    action: "Action"
+    exams_number: "Exams total: %{number}"

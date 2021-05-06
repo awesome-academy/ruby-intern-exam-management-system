@@ -6,9 +6,12 @@ Rails.application.routes.draw do
     get "/signup", to: "sessions#new"
     post "/signup", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-    namespace :supervisor do
+    scope module: :supervisor do
       resources :questions
       resources :exams
+      resources :trainees do
+        resources :user_exams
+      end
     end
     scope module: :trainee do
       resources :user_exams
