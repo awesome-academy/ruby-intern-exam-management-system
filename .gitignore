@@ -44,15 +44,10 @@ yarn-debug.log*
 config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
-config/settings
 .vscode/
 
 /test/
 /storage/
 # Ignore application configuration
 /config/application.yml
-/spec/helpers/
-/spec/requests/
-/spec/views/
-/spec/models/
-/bin/
+coverage

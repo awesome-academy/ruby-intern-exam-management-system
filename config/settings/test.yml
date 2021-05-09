@@ -1,0 +1,13 @@
+user:
+  name:
+    max_length: 50
+  email:
+    max_length: 100
+    regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  password:
+    min_length: 6
+page: 20
+exam:
+  name:
+    max_length: 50
+  number_defaulf: 10

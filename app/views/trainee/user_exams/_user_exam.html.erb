@@ -12,9 +12,9 @@
   <td><%= user_exam.total_score || "-" %></td>
   <td>
     <% if user_exam.start? %>
-      <%= link_to  t("user_exams.start"), user_exam_path(user_exam), class:"btn btn-primary button" %>
-    <%else %>
-      <%= link_to  t("user_exams.view"), user_exam_path(user_exam), class:"btn btn-success button" %>
+      <%= link_to t("user_exams.start"), user_exam_path(id: user_exam.id), class:"btn btn-primary button" %>
+    <% else %>
+      <%= link_to t("user_exams.view"), user_exam_path(id: user_exam.id), class:"btn btn-success button" %>
     <% end %>
   </td>
 </tr>
