@@ -51,8 +51,4 @@ config/settings
 /storage/
 # Ignore application configuration
 /config/application.yml
-/spec/helpers/
-/spec/requests/
-/spec/views/
-/spec/models/
-/bin/
+coverage
