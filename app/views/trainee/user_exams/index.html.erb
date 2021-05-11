@@ -24,6 +24,6 @@
       <th class="action"></th>
     </tr>
   </thead>
-  <%= render @user_exams %>
+  <%= render partial: "user_exam", collection: @user_exams, as: :user_exam %>
 </table>
 </div>
