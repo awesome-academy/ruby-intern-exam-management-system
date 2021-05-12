@@ -6,6 +6,7 @@ FactoryBot.define do
     password_confirmation { "123456" }
 
     factory :user_with_user_exams do
+      role { User.roles[:trainee] }
       transient do
         user_exams_count { 5 }
       end
