@@ -9,8 +9,7 @@ RSpec.describe User, type: :model do
 
   describe "Validations" do
     context "validates password attribute" do
-      it { expect(User.new).to validate_presence_of :password }
-      it { is_expected.to have_secure_password }
+      it { is_expected.to validate_presence_of :password }
       it { is_expected.to validate_length_of :password }
     end
 

@@ -1,5 +1,5 @@
 class SupervisorController < ApplicationController
-  before_action :logged_in_user, :require_supervisor
+  before_action :authenticate_user!, :require_supervisor
 
   private
 

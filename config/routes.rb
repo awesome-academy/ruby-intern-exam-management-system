@@ -3,9 +3,11 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root "sessions#new"
-    get "/signup", to: "sessions#new"
-    post "/signup", to: "sessions#create"
-    delete "/logout", to: "sessions#destroy"
+    as :user do
+      get "/signup", to: "devise/sessions#new"
+      post "/signup", to: "devise/sessions#create"
+      delete "/logout", to: "devise/sessions#destroy"
+    end
     scope module: :supervisor do
       resources :questions
       resources :exams
@@ -16,5 +18,6 @@ Rails.application.routes.draw do
     scope module: :trainee do
       resources :user_exams
     end
+    devise_for :users
   end
 end
