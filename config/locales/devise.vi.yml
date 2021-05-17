@@ -1,0 +1,13 @@
+vi:
+  devise:
+    failure:
+      already_authenticated: "Bạn đã đăng nhập rồi."
+      not_found_in_database: "%{authentication_keys} hoặc mật khẩu sai."
+      timeout: "Phiên làm việc đã hết hạn. Vui lòng đăng nhập lại để tiếp tục."
+      unauthenticated: "Bạn cần đăng nhập để tiếp tục."
+      user:
+        invalid: "%{authentication_keys} hoặc mật khẩu sai."
+    sessions:
+      signed_in: "Đăng nhập thành công."
+      signed_out: "Đăng xuất thành công."
+      already_signed_out: "Đăng xuất thành công."

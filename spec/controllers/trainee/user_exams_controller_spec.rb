@@ -1,13 +1,11 @@
 require "rails_helper"
 
 RSpec.describe Trainee::UserExamsController, type: :controller do
-  include SessionsHelper
-
   let!(:user) { create(:user_with_user_exams) }
   let(:user_exams) { user.user_exams }
 
   before(:each) do
-    log_in user
+    sign_in user
   end
 
   describe "GET #index" do

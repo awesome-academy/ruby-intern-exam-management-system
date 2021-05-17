@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  devise :database_authenticatable, :rememberable, :validatable
   enum role: {supervisor: 1, trainee: 2}
   attr_accessor :remember_token
   before_save ->{email.downcase!}
@@ -7,7 +8,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true,
             length: {maximum: Settings.user.email.max_length},
             format: {with: Settings.user.email.regex}
-  has_secure_password
   validates :password, presence: true,
             length: {minimum: Settings.user.password.min_length}
   has_many :user_exams, dependent: :destroy

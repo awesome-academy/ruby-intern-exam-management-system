@@ -15,7 +15,7 @@
   <body>
     <%= raw custom_bootstrap_flash %>
     <%= render "layouts/header" %>
-    <% if logged_in? %>
+    <% if user_signed_in? %>
       <% if current_user.supervisor? %>
         <div id="dashboard">
           <%= render "layouts/dashboard" %>
