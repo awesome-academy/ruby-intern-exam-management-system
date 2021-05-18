@@ -1,10 +1,10 @@
 class TraineeController < ApplicationController
-  before_action :authenticate_user!, :require_trainee
+  before_action :authenticate_user!
 
-  def require_trainee
-    return if current_user.trainee?
+  private
 
-    flash[:danger] = t("access_denied!")
-    redirect_to root_path
+  def current_ability
+    @current_ability ||=
+      Ability.new(current_user, Settings.namespace.trainee)
   end
 end

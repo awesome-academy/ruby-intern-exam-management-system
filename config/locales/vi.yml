@@ -14,3 +14,5 @@ vi:
       default: "%d/%m/%Y %H:%M"
       long: "%d-%m-%Y %H:%M"
       short: "%d %b %H:%M"
+  unauthorized:
+    message: "Bạn không có quyền truy cập vào trang này."
