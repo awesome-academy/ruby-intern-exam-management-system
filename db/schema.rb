@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_17_014800) do
+ActiveRecord::Schema.define(version: 2021_05_18_091425) do
 
   create_table "answers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.text "content"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_05_17_014800) do
     t.bigint "subject_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "total_number_questions"
     t.index ["subject_id"], name: "index_exams_on_subject_id"
   end
 

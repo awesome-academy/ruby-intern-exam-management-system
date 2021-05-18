@@ -6,4 +6,5 @@ class Exam < ApplicationRecord
   scope :questions_sort_by_created_at_asc, (lambda do |exam|
     exam.questions.order(created_at: :asc)
   end)
+  delegate :name, to: :subject, prefix: true
 end
