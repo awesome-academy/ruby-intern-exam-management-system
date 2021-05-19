@@ -3,8 +3,9 @@ class Supervisor::ExamsController < SupervisorController
   load_and_authorize_resource
 
   def index
-    @exams = @exams.sort_by_created_at_desc.includes(:subject)
-                   .paginate(page: params[:page]).per_page(Settings.page)
+    @q = Exam.ransack(params[:q])
+    @exams = @q.result.includes(:subject)
+               .paginate(page: params[:page]).per_page(Settings.page)
   end
 
   def show
