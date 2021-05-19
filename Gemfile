@@ -27,9 +27,11 @@ gem "rails", "~> 6.1.3"
 gem "rails-i18n"
 gem "ransack"
 gem "sass-rails", ">= 6"
+gem "sidekiq"
 gem "toastr-rails"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
+gem "whenever", require: false
 gem "will_paginate", "3.1.8"
 
 group :development, :test do

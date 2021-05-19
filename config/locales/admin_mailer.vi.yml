@@ -1,0 +1,12 @@
+vi:
+  admin_mailer:
+    subjects:
+      exam_statistic: "Thống kê các bài thi"
+    greeting: "Chào bạn"
+    introduce: "Tôi là Autobot."
+    statistic:
+      content: "Tôi gửi bạn thống kê bài thi đã làm ngày hôm nay:"
+      result: "Ngày: %{date}, Tổng bài: %{total}"
+      detail: "Chi tiết:"
+      subjec: "Chủ đề"
+      count: "Số lượng"

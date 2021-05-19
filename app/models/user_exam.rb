@@ -3,12 +3,15 @@ class UserExam < ApplicationRecord
   belongs_to :exam
   enum status: {start: 0, unchecked: 1, checked: 2, testing: 3}
   scope :sort_by_created_at_desc, ->{order created_at: :desc}
+  scope :done_on_date, (lambda do |date|
+    where "date(user_exams.updated_at) = date('#{date}')"
+  end)
   has_one :subject, through: :exam
   has_many :questions, through: :exam
   has_many :user_exam_answers, dependent: :destroy
   has_many :answers, through: :user_exam_answers
-  accepts_nested_attributes_for :questions
   has_many :exam_questions, through: :exam
+  accepts_nested_attributes_for :questions
 
   def mark
     self.exam_questions = exam_questions.includes :question, :answers
