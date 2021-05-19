@@ -2,14 +2,14 @@ class Trainee::UserExamsController < TraineeController
   before_action :correct_user, only: %i(show update)
   before_action :check_user_exam_done?, only: :update
   before_action :load_subject, only: :create
+  load_and_authorize_resource
 
   def index
     @subjects = Subject.sort_by_created_at_desc
-    @user_exams = current_user.user_exams
-                              .sort_by_created_at_desc
-                              .includes({exam: :exam_questions}, :subject)
-                              .paginate(page: params[:page])
-                              .per_page(Settings.page)
+    @user_exams = @user_exams.sort_by_created_at_desc
+                             .includes({exam: :exam_questions}, :subject)
+                             .paginate(page: params[:page])
+                             .per_page(Settings.page)
   end
 
   def show

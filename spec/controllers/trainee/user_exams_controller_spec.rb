@@ -3,7 +3,6 @@ require "rails_helper"
 RSpec.describe Trainee::UserExamsController, type: :controller do
   let!(:user) { create(:user_with_user_exams) }
   let(:user_exams) { user.user_exams }
-
   before(:each) do
     sign_in user
   end
@@ -27,20 +26,6 @@ RSpec.describe Trainee::UserExamsController, type: :controller do
   end
 
   describe "GET #show" do
-    context "user_exam  is not found" do
-      before do
-        get :show, params: {id: -1}
-      end
-
-      it "redirects to user_exams_path" do
-        expect(response).to redirect_to user_exams_path
-      end
-
-      it "flash danger with not found messeage" do
-        expect(flash[:danger]).to eq I18n.t("user_exams.not_found!")
-      end
-    end
-
     context "user exam is present" do
       it "renders show view" do
         get :show, params: {id: user.user_exams.first}
@@ -73,20 +58,6 @@ RSpec.describe Trainee::UserExamsController, type: :controller do
   end
 
   describe "POST #update" do
-    context "user_exam is not found" do
-      before do
-        post :update, params: {id: -1}
-      end
-
-      it "redirects to user_exams_path" do
-        expect(response).to redirect_to user_exams_path
-      end
-
-      it "flash danger with not_found message" do
-        expect(flash[:danger]).to eq I18n.t("user_exams.not_found!")
-      end
-    end
-
     context "user_exam was done" do
       before do
         user_exams.first.checked!
@@ -107,6 +78,7 @@ RSpec.describe Trainee::UserExamsController, type: :controller do
       before do
         allow(controller).to receive(:check_user_exam_done?)
         allow(controller).to receive(:save_and_mark_user_exam)
+        user_exams.first.testing!
 
         post :update, params: {id: user_exams.first}
       end
@@ -124,6 +96,7 @@ RSpec.describe Trainee::UserExamsController, type: :controller do
       before do
         allow(controller).to receive(:check_user_exam_done?)
         allow(controller).to receive(:save_and_mark_user_exam).and_raise ActiveRecord::ActiveRecordError
+        user_exams.first.testing!
 
         post :update, params: {id: user_exams.first}
       end

@@ -3,6 +3,11 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
 
+  rescue_from CanCan::AccessDenied do
+    flash[:danger] = t "unauthorized.message"
+    redirect_to root_path
+  end
+
   private
 
   def set_locale

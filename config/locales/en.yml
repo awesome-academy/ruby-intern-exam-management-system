@@ -14,3 +14,5 @@ en:
       default: "%Y/%m/%d %H:%M"
       long: "%Y-%m-%d %H:%M"
       short: "%d %b %H:%M"
+  unauthorized:
+    message: "You are not authorized to access this page."

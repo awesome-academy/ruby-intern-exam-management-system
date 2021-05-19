@@ -11,3 +11,6 @@ exam:
   name:
     max_length: 50
   number_defaulf: 10
+namespace:
+  supervisor: "Supervisor"
+  trainee: "Trainee"

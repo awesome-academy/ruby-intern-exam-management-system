@@ -1,5 +1,6 @@
 class Supervisor::UserExamsController < SupervisorController
   before_action :load_trainee, only: :index
+  authorize_resource
 
   def index
     @user_exams = @trainee.user_exams
