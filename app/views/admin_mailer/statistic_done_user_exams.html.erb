@@ -1,0 +1,12 @@
+<p><%= t "admin_mailer.greeting" %>,</p>
+<p><%= t "admin_mailer.introduce" %></p>
+<p><%= t "admin_mailer.statistic.content" %></p>
+<p><%= t("admin_mailer.statistic.result", date: @statistic.date.to_date, total: @statistic.total_done_exams)%></p>
+<p><%= t "admin_mailer.statistic.detail" %></p>
+<table>
+  <tr>
+    <th><%= t "admin_mailer.statistic.subject" %></th>
+    <th><%= t "admin_mailer.statistic.count" %></th>
+  </tr>
+  <%= render partial: "statistic_done_user_exam", collection: @statistic_detail, as: :statistic_done_user_exam %>
+</table>

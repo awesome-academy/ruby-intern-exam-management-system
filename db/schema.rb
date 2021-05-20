@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_18_091425) do
+ActiveRecord::Schema.define(version: 2021_05_19_103439) do
 
   create_table "answers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.text "content"
@@ -65,6 +65,23 @@ ActiveRecord::Schema.define(version: 2021_05_18_091425) do
     t.index ["user_exam_id"], name: "index_user_exam_answers_on_user_exam_id"
   end
 
+  create_table "user_exam_statistic_details", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "count"
+    t.bigint "subject_id", null: false
+    t.bigint "user_exam_statistic_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subject_id"], name: "index_user_exam_statistic_details_on_subject_id"
+    t.index ["user_exam_statistic_id"], name: "index_user_exam_statistic_details_on_user_exam_statistic_id"
+  end
+
+  create_table "user_exam_statistics", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.datetime "date"
+    t.integer "total_done_exams"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "user_exams", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "spent_time", default: 0
     t.integer "total_score"
@@ -97,6 +114,8 @@ ActiveRecord::Schema.define(version: 2021_05_18_091425) do
   add_foreign_key "questions", "subjects"
   add_foreign_key "user_exam_answers", "answers", column: "user_answer_id"
   add_foreign_key "user_exam_answers", "user_exams"
+  add_foreign_key "user_exam_statistic_details", "subjects"
+  add_foreign_key "user_exam_statistic_details", "user_exam_statistics"
   add_foreign_key "user_exams", "exams"
   add_foreign_key "user_exams", "users"
 end

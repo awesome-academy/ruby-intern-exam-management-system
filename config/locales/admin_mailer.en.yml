@@ -1,0 +1,12 @@
+en:
+  admin_mailer:
+    subjects:
+      exam_statistic: "Exam Statistics"
+    greeting: "Hi you"
+    introduce: "I am Autobot."
+    statistic:
+      content: "I send you the statistic of total done exam today:"
+      result: "Date: %{date}, Total exam: %{total}"
+      detail: "Detail:"
+      subjec: "Subject"
+      count: "Count"
