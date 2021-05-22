@@ -8,3 +8,7 @@ end
 every :day, at: "12:30 pm" do
   runner "AdminMailer.statistic_done_user_exams(DateTime.yesterday).deliver_later"
 end
+
+every "0 0 28 * *" do
+  command "rake statistic_miss_days"
+end
