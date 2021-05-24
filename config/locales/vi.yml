@@ -6,7 +6,10 @@ vi:
   next: "Sau"
   question: "Câu hỏi"
   subject: "Chủ đề"
+  user: "Người dùng"
   trainee: "Học viên"
+  supervisor: "Người giám sát"
+  new_user: "Thêm người dùng"
   access_denied!: "Truy cập bị từ chối!"
   exam: "Đề thi"
   time:
@@ -16,3 +19,10 @@ vi:
       short: "%d %b %H:%M"
   unauthorized:
     message: "Bạn không có quyền truy cập vào trang này."
+  views:
+      pagination:
+        first: "&laquo; Đầu"
+        last: "Cuối &raquo;"
+        previous: "&lsaquo; Trước"
+        next: "Sau &rsaquo;"
+        truncate: "&hellip;"

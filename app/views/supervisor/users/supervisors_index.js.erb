@@ -1,0 +1,2 @@
+$("#supervisors").html("<%= j render(partial: 'supervisor', collection: @supervisors, as: :supervisor) %>");
+$("#supervisor-pagination").html("<%= j paginate(@supervisors, remote: true, theme: 'twitter-bootstrap-3') %>");

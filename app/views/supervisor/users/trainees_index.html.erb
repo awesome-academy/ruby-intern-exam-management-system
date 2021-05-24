@@ -1,0 +1,34 @@
+<% provide :title, t("users.titles.trainees") %>
+
+<div class="users-container">
+  <div class="tabcontent trainee-content">
+    <div class="row">
+      <h2><%= t("users.trainees") %></h2>
+      <%= search_form_for @q, url: trainees_users_path, class: "input-group search-box" do |f| %>
+        <%= f.text_field :name_cont, class: "form-control", placeholder: t("users.search_for") %>
+        <span class="input-group-btn">
+          <%= f.submit t("users.search"), class: "btn btn-default" %>
+        </span>
+      <% end %>
+    </div>
+    <table class="trainee-table table">
+      <thead>
+        <tr>
+          <th class="name"><%= t("users.name") %></th>
+          <th class="create_date"><%= t("users.create_date") %></th>
+          <th class="exams_count"><%= t("users.exams_count") %></th>
+          <th class="exams"><%= t("users.exams") %></th>
+          <th class="profile"><%= t("users.porfile") %></th>
+          <th class="edit"><%= t("users.edit") %></th>
+          <th class="delete"><%= t("users.delete") %></th>
+        </tr>
+      </thead>
+      <tbody id="trainees">
+        <%= render partial: "trainee", collection: @trainees, as: :trainee %>
+      </tbody>
+    </table>
+    <div class="pagination-container" id="trainee-pagination">
+      <%= paginate @trainees, remote: true, theme: "twitter-bootstrap-3" %>
+    </div>
+  </div>
+</div>

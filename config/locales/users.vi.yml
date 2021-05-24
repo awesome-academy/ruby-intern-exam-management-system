@@ -1,0 +1,11 @@
+vi:
+  users:
+    titles:
+      all: "Người dùng"
+      trainees: "Học viên"
+      supervisors: "Người giám sát"
+    trainees: "Học viên"
+    supervisors: "Người giám sát"
+    add: "Thêm ngừơi dùng"
+    search: "Tìm kiếm"
+    search_for: "Tìm kiếm theo tên..."

@@ -1,7 +1,13 @@
 <%= javascript_pack_tag "sidebar_active" %>
 <ul class="nav navbar-fixed-left">
+  <li class="nav-item"><%= link_to t("user"), "#" %>
+    <ul class="user-nav">
+      <li class="nav-item sub-item"><%= link_to t("new_user"), new_user_path %></li>
+      <li class="nav-item sub-item"><%= link_to t("trainee"), trainees_users_path %></li>
+      <li class="nav-item sub-item"><%= link_to t("supervisor"), supervisors_users_path %></li>
+    </ul>
+  </li>
   <li class="nav-item"><%= link_to t("question"), questions_path %></li>
   <li class="nav-item"><%= link_to t("exam"), exams_path %></li>
   <li class="nav-item"><%= link_to t("subject"), "#" %></li>
-  <li class="nav-item"><%= link_to t("trainee"), trainees_path %></li>
 </ul>

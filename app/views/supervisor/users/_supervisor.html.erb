@@ -1,0 +1,19 @@
+<tr>
+  <td class="name"><%= supervisor.name %></td>
+  <td class="create_date"><%= l(supervisor.created_at, format: :long) %></td>
+  <td class="profile">
+    <%= link_to(user_path(supervisor)) do %>
+      <i class="glyphicon glyphicon-user"></i>
+    <% end %>
+  </td>
+  <td class="edit">
+    <%= link_to(edit_user_path(supervisor)) do %>
+      <i class="glyphicon glyphicon-edit"></i>
+    <% end %>
+  </td>
+  <td class="delete">
+    <%= link_to(user_path(supervisor), method: :delete) do %>
+      <i class="glyphicon glyphicon-trash"></i>
+    <% end %>
+  </td>
+</tr>

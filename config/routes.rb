@@ -14,6 +14,12 @@ Rails.application.routes.draw do
       resources :trainees do
         resources :user_exams
       end
+      resources :users do
+        collection do
+          get "/trainees", to: "users#trainees_index"
+          get "/supervisors", to: "users#supervisors_index"
+        end
+      end
     end
     scope module: :trainee do
       resources :user_exams

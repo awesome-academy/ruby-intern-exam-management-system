@@ -5,7 +5,18 @@ User.create!(name: "Example User",
   name: "Admin",
   role: 1)
 
-5.times do |n|
+30.times do |n|
+  name = Faker::Name.name
+  email = "admin-#{n+1}@gmail.com"
+  password = "password"
+  User.create!(name: name,
+      email: email,
+      password: password,
+      password_confirmation: password,
+      role: 1)
+end
+
+30.times do |n|
   name = Faker::Name.name
   email = "user-#{n+1}@gmail.com"
   password = "password"
@@ -82,11 +93,12 @@ exams_list.each do |exam|
   end
 end
 
-5.times do |n|
+trainees = User.trainees.pluck :id
+100.times do |n|
   UserExam.create!(
     spent_time: 0,
     status: 0,
     exam_id: Exam.pluck(:id).sample,
-    user_id: 2
+    user_id: trainees.sample
   )
 end

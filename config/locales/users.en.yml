@@ -1,0 +1,11 @@
+en:
+  users:
+    titles:
+      all: "All users"
+      trainees: "Trainees"
+      supervisors: "Supervisors"
+    trainees: "Trainees"
+    supervisors: "Supervisors"
+    add: "Add new user"
+    search: "Search"
+    search_for: "Search for name..."

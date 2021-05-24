@@ -1,0 +1,94 @@
+.trainee-table{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.supervisor-table{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.users-container {
+  margin-top: -9px;
+}
+
+.trainee-table .name{
+  width: 30%;
+}
+
+.trainee-table .create_date{
+  width: 20%;
+}
+
+.trainee-table .exams_count{
+  width: 10%;
+}
+
+.trainee-table .exams{
+  width: 10%;
+}
+
+.trainee-table .profile{
+  width: 10%;
+}
+
+.trainee-table .edit{
+  width: 10%;
+}
+
+.trainee-table .delete{
+  width: 10%;
+}
+
+.supervisor-table .name{
+  width: 30%;
+}
+
+.trainee-table .create_date{
+  width: 30%;
+}
+
+.supervisor-table .profile{
+  width: 10%;
+}
+
+.supervisor-table .edit{
+  width: 10%;
+}
+
+.supervisor-table .delete{
+  width: 10%;
+}
+
+.glyphicon {
+  font-size: 18px;
+}
+
+.glyphicon-list {
+  color: #000;
+}
+
+.glyphicon-user {
+  color: green;
+}
+
+.glyphicon-edit {
+  color: orange;
+}
+
+.glyphicon-trash {
+  color: red;
+}
+
+.glyphicon-plus {
+  font-size: 14px;
+}
+
+.user-add-btn {
+  margin-left: 20px;
+}
+
+hr.table-content {
+  border: 1px solid rgb(155, 153, 153);
+  margin-bottom: 0;
+}
