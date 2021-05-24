@@ -1,9 +1,26 @@
 vi:
   questions:
-    title: "Danh sách câu hỏi"
+    title:
+      all: "Danh sách câu hỏi"
+      create_list_questions: "Tạo danh sách câu hỏi"
     search: "Tìm kiếm"
     search_for: "Nhập nội dung..."
     info: "Chi tiết"
     edit: "Sửa"
     delete: "Xoá"
     no_result_was_found_html: "<h3 class='no-result'>Không có kết quả nào được tìm thâý!</h3>"
+    create_list: "Tạo danh sách"
+    choice_subject!: "Chọn chủ đề"
+    choice_file: "Chọn tệp"
+    choice_subject: "Chọn chủ đề"
+    file_format: "Định dạng tệp Excel"
+    file_format_instruction_html: "<ul>
+        <li><h4>Mỗi hàng là một câu hỏi</h4></li>
+        <li><h4>Cột đầu tiên chứa nội dung câu hỏi</h4></li>
+        <li><h4>Các cột tiếp theo chứa các nội dung của câu trả lời. Các chỉ mục tương ứng sẽ là 1,2,...</h4></li>
+        <li><h4>Cột cuối cùng sẽ chứa các chỉ mục của câu trả lời đúng, được phân cách bơí dấu phẩy(,)</h4></li>
+      </ul>"
+    create_list_fail: "Không thành công. Có lỗi tại khi đọc file"
+    create_list_success: "Tạo danh sách câu hỏi thành công"
+    please_choice_file!: "Vui lòng chọn tệp"
+    please_choice_correct_file_type!: "Vui lòng chọn tệp là tệp excel"

@@ -1,0 +1,24 @@
+<% provide :title, t("questions.title.create_list_questions") %>
+
+<h1><%= t("questions.title.create_list_questions") %></h1>
+<div class="row new-list-questions">
+  <%= form_for :list_questions, url: create_list_questions_path, html: { multipart: true }, class:"form-control" do |f| %>
+    <%= label_tag "subject", t("questions.choice_subject"), class: "col-md-4" %>
+    <div class="select-subject col-md-8">
+      <%= select_tag("subject", options_for_select(subject_options(@subjects)), {class:"form-control button"}) %>
+    </div>
+    <%= label_tag "file", t("questions.choice_file"), class: "col-md-4" %>
+    <div class="file col-md-8">
+      <%= file_field_tag :file, class: "form-control" %>
+    </div>
+    <%= f.submit t("questions.create_list"), class:"btn btn-primary button" %>
+  <% end %>
+</div>
+<hr>
+
+<div>
+  <h2><%= t "questions.file_format" %></h2>
+  <div>
+    <%= t "questions.file_format_instruction_html" %>
+  </div>
+</div>

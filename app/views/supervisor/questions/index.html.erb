@@ -1,6 +1,11 @@
 <%= javascript_pack_tag "questions" %>
-<% provide :title, t("questions.title") %>
-<h1><%= t("questions.title") %></h1>
+<div>
+  <%= link_to new_list_questions_path, class: "btn btn-primary button" do %>
+    <%= t("questions.create_list_questions") %>&nbsp;&nbsp;<i class="glyphicon glyphicon-plus"></i>
+  <% end %>
+</div>
+<% provide :title, t("questions.title.all") %>
+<h1><%= t("questions.title.all") %></h1>
 <div class="row">
   <div class="input-group search-box">
     <input type="text" class="form-control" placeholder="<%= t("questions.search_for") %>">

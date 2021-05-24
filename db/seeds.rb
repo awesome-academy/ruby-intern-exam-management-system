@@ -93,7 +93,7 @@ exams_list.each do |exam|
   end
 end
 
-trainees = User.trainees.pluck :id
+trainees = User.trainee.pluck :id
 100.times do |n|
   UserExam.create!(
     spent_time: 0,
