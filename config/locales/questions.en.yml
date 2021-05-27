@@ -1,9 +1,26 @@
 en:
   questions:
-    title: "Questions List"
+    title:
+      all: "Questions List"
+      create_list_questions: "Create list of questions"
     search: "Search"
     search_for: "Search for..."
     info: "Detail"
     edit: "Edit"
     delete: "Delete"
     no_result_was_found_html: "<h3 class='no-result'>No result was found!</h3>"
+    create_list: "Create list"
+    choice_subject!: "Choice subject"
+    choice_file: "Choice file"
+    choice_subject: "Choice subject"
+    file_format: "File format"
+    file_format_instruction_html: "<ul>
+        <li><h4>Each row is a question</h4></li>
+        <li><h4>The first column contains the question's content</h4></li>
+        <li><h4>The coutinue columns contain the answers' contents. The coresponding indexes are 1,2,...</h4></li>
+        <li><h4>The last column contains the correct answer's indexes, split by comma(,)</h4></li>
+      </ul>"
+    create_list_fail: "Create list fail. Having an error while reading file"
+    create_list_success: "Create list success"
+    please_choice_file!: "Please choice file"
+    please_choice_correct_file_type!: "Please choice file type is excel file"

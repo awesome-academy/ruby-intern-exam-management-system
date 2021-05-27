@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     end
     scope module: :supervisor do
       resources :questions
+      as :questions do
+        get "/new_list_questions", to: "questions#new_list"
+        post "/create_list_questions", to: "questions#create_list"
+      end
       resources :exams
       resources :trainees do
         resources :user_exams

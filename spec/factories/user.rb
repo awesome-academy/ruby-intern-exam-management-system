@@ -16,5 +16,9 @@ FactoryBot.define do
         user.reload
       end
     end
+
+    factory :supervisor_user do
+      role { User.roles[:supervisor] }
+    end
   end
 end

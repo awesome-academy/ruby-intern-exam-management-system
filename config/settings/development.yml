@@ -14,3 +14,9 @@ exam:
 namespace:
   supervisor: "Supervisor"
   trainee: "Trainee"
+question:
+  content:
+    max_length: 100
+answer:
+  content:
+    max_length: 100

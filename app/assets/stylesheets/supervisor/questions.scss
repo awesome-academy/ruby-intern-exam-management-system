@@ -87,3 +87,18 @@ input[type="radio"] {
 .no-result {
   text-align: center;
 }
+
+.new-list-questions {
+  width: 50%;
+  .select-subject, .file{
+    margin-top: 20px;
+  }
+  label{
+    margin-top: 28px;
+    text-align: left;
+  }
+  input[type="submit"] {
+    width: 30%;
+    margin: 20px auto;
+  }
+}
